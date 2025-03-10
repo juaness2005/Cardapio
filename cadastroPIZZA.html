@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pizza | Hot Pizzas</title>
+    <link rel="stylesheet" href="css/pizza.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="assets/logo.jpg" alt="Logo da Empresa"> 
+        </a>
+    </header>
+
+    <section class="cadastro">
+        <h2>Cadastro de Nova Pizza</h2>
+        <form id="formCadastro" action="/cadastro" method="POST" enctype="multipart/form-data">
+            <div class="campo">
+                <label for="nome">Nome da Pizza:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+            </div>
+
+            <div class="campo-precos">
+                <div class="campo">
+                    <label for="preco6">Preço 6 Fatias (R$):</label>
+                    <input type="number" id="preco6" name="preco6" step="0.01" required>
+                </div>
+            
+                <div class="campo">
+                    <label for="preco8">Preço 8 Fatias (R$):</label>
+                    <input type="number" id="preco8" name="preco8" step="0.01" required>
+                </div>
+            
+                <div class="campo">
+                    <label for="preco12">Preço 12 Fatias (R$):</label>
+                    <input type="number" id="preco12" name="preco12" step="0.01" required>
+                </div>
+            </div>
+            
+
+            <div class="campo">
+                <label for="imagem">Imagem da Pizza:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required>
+            </div>
+
+            <button type="submit">Cadastrar Pizza</button>
+        </form>
+    </section>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
